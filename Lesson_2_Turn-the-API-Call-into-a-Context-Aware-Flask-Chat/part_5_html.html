@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html>
+
+<body>
+
+  <h1>Study Buddy</h1>
+
+  <form action="/get" method="get">
+
+    <input name="msg" placeholder="Ask a study question">
+
+    <button type="submit">Send</button>
+
+  </form>
+
+  <section>
+
+    {% for message in history %}
+
+      <p><strong>{{ message.role }}:</strong> {{ message.content }}</p>
+
+    {% endfor %}
+
+  </section>
+
+</body>
+
+</html>
